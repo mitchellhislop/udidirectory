@@ -18,7 +18,7 @@ class UdidsController < ApplicationController
     @udid.user = current_user
 
     if @udid.save
-      redirect_to udids_url, :notice => 'Udid was successfully created.'
+      redirect_to udids_url, :notice => 'Saved, you should feel special because you are!'
     else
       render :action => "new"
     end
@@ -28,7 +28,7 @@ class UdidsController < ApplicationController
     @udid = current_user.udids.find(params[:id])
 
     if @udid.update_attributes(params[:udid])
-      redirect_to udids_url, :notice => 'Udid was successfully updated.'
+      redirect_to udids_url, :notice => 'Noted, saved, compiled, processed.'
     else
       render :action => "edit"
     end
