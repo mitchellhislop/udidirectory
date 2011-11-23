@@ -19,6 +19,7 @@ class UdidsController < ApplicationController
 
   def create
     @udid = current_user.udids.new(params[:udid])
+    @udid.user = current_user
 
     if @udid.save
       redirect_to @udid, :notice => 'Udid was successfully created.'
