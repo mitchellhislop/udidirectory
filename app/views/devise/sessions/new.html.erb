@@ -1,0 +1,13 @@
+<h2>Sign in</h2>
+
+<%= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :email, :as => :email %>
+    <%= f.input :password, :as => :password %>
+  <% end %>
+  <%= f.buttons do %>
+    <%= f.commit_button "Sign in" %>
+  <% end %>
+<% end %>
+
+<%= render :partial => "devise/shared/links" %>

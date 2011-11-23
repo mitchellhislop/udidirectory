@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>Udidirectory</title>
+  <%= stylesheet_link_tag "application" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<div id="doc">
+  <div id="hd">
+    <ol class="signin-bar">
+      <% if !user_signed_in? %>
+        <li><%= link_to "Sign in", signin_url %></li>
+        <li><%= link_to "Sign up", signup_url %></li>
+      <% else %>
+        <li><%= current_user.name %></li>
+        <li><%= link_to "Sign out", signout_url %></li>
+      <% end %>
+    </ol>
+    <h1>Udidirectory</h1></div>
+  <div id="bd">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div>
+      <%= yield %>
+    </div>
+  </div>
+  <div id="ft"><p></p></div>
+</div>
+<%= javascript_include_tag :application %>
+<script type="text/javascript">
+  <%= yield :javascripts %>
+</script>
+</body>
+</html>

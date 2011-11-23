@@ -1,0 +1,46 @@
+@import "compass"
+@import "compass/typography/lists"
+
+html
+  font: 13px/1.231 arial, helvetica, clean, sans-serif
+
+#hd::after, #bd::after, #ft::after
+  content: "."
+  display: block
+  height: 0
+  clear: both
+  visibility: hidden
+
+body
+  text-align: left
+  background-color: #eee
+
+#doc
+  margin: auto
+  text-align: left
+  width: 57.69em
+  border: 1px solid #ddd
+  padding: 0 1em
+  background-color: white
+
+a, a:hover, a:visited
+  color: blue
+
+h1
+  font-size: 1.5em
+
+h2
+  font-size: 1.3em
+
+h3
+  font-size: 1.1em
+
+#hd
+  margin-bottom: 0.5em
+
+#hd h1
+  font-size: 1.5em
+
+.signin-bar
+  float: right
+  +horizontal-list
