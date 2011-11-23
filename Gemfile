@@ -47,3 +47,7 @@ gem "rails3-generators", "0.17.4", :group => [:development]
 gem "mysql2"
 gem "yajl-ruby"
 gem "jquery-rails"
+
+group :production do
+  gem "pg"
+end
