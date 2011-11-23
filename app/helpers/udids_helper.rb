@@ -1,0 +1,2 @@
+module UdidsHelper
+end

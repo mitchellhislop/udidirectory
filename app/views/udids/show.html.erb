@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @udid.name %>
+</p>
+
+<p>
+  <b>Udid:</b>
+  <%= @udid.udid %>
+</p>
+
+
+<%= link_to 'Edit', edit_udid_path(@udid) %> |
+<%= link_to 'Back', udids_path %>
