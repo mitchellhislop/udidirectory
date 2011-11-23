@@ -1,9 +1,16 @@
 @import "compass"
 @import "compass/typography/lists"
+@import "compass/css3/border-radius"
+@import "compass/css3/box-shadow"
+
+$default-border-radius: 2px
 
 html
   font: 13px/1.231 helvetica, clean, sans-serif
-  background-color: #eee
+  background-image: url("/images/crosses.png")
+  background-repeat: repeat
+  background-attachment: fixed
+  background-position: center top
 
 #hd::after, #bd::after, #ft::after
   content: "."
@@ -16,6 +23,8 @@ body
   text-align: left
 
 #doc
+  +border-radius
+  +single-box-shadow(#aaa, 1px, 1px, 3px, 1px)
   margin: 2em auto
   text-align: left
   width: 500px
