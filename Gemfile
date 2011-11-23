@@ -18,6 +18,8 @@ group :assets do
 end
 
 
+# Twitter authentication
+gem 'twitter-auth',     :git => 'git://github.com/paulrosania/twitter-auth.git'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
