@@ -6,7 +6,6 @@ Udidirectory::Application.routes.draw do
     get "signin", :to => "devise/sessions#new"
     get "signout", :to => "devise/sessions#destroy"
   end
-
   devise_for :users
 
   root :to => 'public#index'
