@@ -1,4 +1,6 @@
 class UdidsController < ApplicationController
+  before_filter :authenticate_user!
+
   def index
     @udids = Udid.all
   end
