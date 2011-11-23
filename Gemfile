@@ -33,10 +33,6 @@ gem "rails3-generators", "0.17.4", :group => [:development]
 gem "yajl-ruby"
 gem "jquery-rails"
 
-group :development do
-  gem "mysql2"
-end
-
 group :production do
   gem "pg"
 end
