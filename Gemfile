@@ -44,9 +44,12 @@ gem "database_cleaner", :group => [:test, :cucumber]
 gem "factory_girl_rails", :group => [:test, :cucumber]
 gem "auto_tagger", "0.2.3", :group => [:development]
 gem "rails3-generators", "0.17.4", :group => [:development]
-gem "mysql2"
 gem "yajl-ruby"
 gem "jquery-rails"
+
+group :development do
+  gem "mysql2"
+end
 
 group :production do
   gem "pg"
