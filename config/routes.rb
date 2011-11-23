@@ -1,5 +1,5 @@
 Udidirectory::Application.routes.draw do
-  resources :udids
+  resources :udids, :expect => [:show]
 
   devise_scope :user do
     get "signup", :to => "devise/registrations#new"

@@ -5,10 +5,6 @@ class UdidsController < ApplicationController
     @udids = current_user.udids.all
   end
 
-  def show
-    @udid = current_user.udids.find(params[:id])
-  end
-
   def new
     @udid = current_user.udids.new
   end
@@ -22,7 +18,7 @@ class UdidsController < ApplicationController
     @udid.user = current_user
 
     if @udid.save
-      redirect_to @udid, :notice => 'Udid was successfully created.'
+      redirect_to udids_url, :notice => 'Udid was successfully created.'
     else
       render :action => "new"
     end
@@ -32,7 +28,7 @@ class UdidsController < ApplicationController
     @udid = current_user.udids.find(params[:id])
 
     if @udid.update_attributes(params[:udid])
-      redirect_to @udid, :notice => 'Udid was successfully updated.'
+      redirect_to udids_url, :notice => 'Udid was successfully updated.'
     else
       render :action => "edit"
     end
