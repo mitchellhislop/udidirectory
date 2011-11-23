@@ -1,25 +1,13 @@
-<h1>Listing udids</h1>
+<h1>Udids</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Udid</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<%= link_to 'New Udid', new_udid_path, :class => "new-link" %>
 
 <% @udids.each do |udid| %>
-  <tr>
-    <td><%= udid.name %></td>
-    <td><%= udid.udid %></td>
-    <td><%= link_to 'Show', udid %></td>
-    <td><%= link_to 'Edit', edit_udid_path(udid) %></td>
-    <td><%= link_to 'Destroy', udid, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <div>
+    <%= udid.name %>
+    <%= udid.udid %>
+    <%= link_to 'Show', udid %>
+    <%= link_to 'Edit', edit_udid_path(udid) %>
+    <%= link_to 'Destroy', udid, :confirm => 'Are you sure?', :method => :delete %>
+  </div>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Udid', new_udid_path %>
