@@ -17,22 +17,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-
-# Twitter authentication
 gem 'twitter-auth',     :git => 'git://github.com/paulrosania/twitter-auth.git'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug'
-
 gem "warden", "1.0.5"
 gem "devise", "1.4.9"
 gem "formtastic", "2.0.2"
@@ -46,7 +31,6 @@ gem "database_cleaner", :group => [:test, :cucumber]
 gem "factory_girl_rails", :group => [:test, :cucumber]
 gem "auto_tagger", "0.2.3", :group => [:development]
 gem "rails3-generators", "0.17.4", :group => [:development]
-gem "mysql2"
 gem "yajl-ruby"
 gem "jquery-rails"
 

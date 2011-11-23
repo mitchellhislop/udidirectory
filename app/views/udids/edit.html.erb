@@ -1,6 +1,9 @@
 <h1>Editing udid</h1>
 
-<%= render 'form' %>
+<%= semantic_form_for @udid do |f| %>
+  <%= render :partial => "form", :locals => {:f => f} %>
+  <%= f.buttons do %>
+    <%= f.submit "Save" %>
+  <% end %>
+<% end %>
 
-<%= link_to 'Show', @udid %> |
-<%= link_to 'Back', udids_path %>
