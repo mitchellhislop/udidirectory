@@ -12,7 +12,10 @@ $highlight: rgb(207, 101, 87)
 
 html
   font: 13px/1.231 helvetica, clean, sans-serif
-  background-color: $ltblue
+  background-image: url("/images/crosses.png")
+  background-repeat: repeat
+  background-attachment: fixed
+  background-position: center top
 
 #hd::after, #bd::after, #ft::after
   content: "."
@@ -26,7 +29,7 @@ body
 
 #doc
   +border-radius
-  +single-box-shadow($black, 1px, 1px, 3px, 1px)
+  +single-box-shadow(#aaa, 1px, 1px, 6px, 1px)
   margin: 2em auto
   text-align: left
   width: 500px
