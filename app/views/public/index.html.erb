@@ -1,6 +1,6 @@
 <ol id="step-list">
-<% if @user %>
-  <li>Hello <%= @user.name %> </li>
+<% if current_user %>
+  <li>Hello <%= current_user.name %> </li>
 <% else %>
   <li><%= form_tag "/auth/twitter", :method => 'get' do %>
   	<%= submit_tag "Sign in with Twitter", :name => "commit", :value => "Sign in" %>

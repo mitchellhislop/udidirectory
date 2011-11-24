@@ -1,7 +1,5 @@
 class PublicController < ApplicationController
   def index
-    if session['access_token'] && session['access_secret']
-      @user = client.user
-    end
+    redirect_to udids_url if current_user
   end
 end

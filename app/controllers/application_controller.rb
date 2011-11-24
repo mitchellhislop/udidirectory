@@ -7,6 +7,16 @@ class ApplicationController < ActionController::Base
 
 protected
 
+  def authenticate_user!
+    redirect_to "/" unless current_user
+  end
+
+  helper_attr :current_user
+  def current_user
+    return unless session['access_token'] && session['access_secret']
+    current_user ||= client.user
+  end
+
   def ensure_domain
     return unless Rails.env.production?
     if request.env['HTTP_HOST'] != APP_DOMAIN
