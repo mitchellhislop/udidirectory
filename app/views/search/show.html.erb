@@ -1,8 +1,15 @@
-<% @users.each do |user| %>
-  <%= link_to twitter_user_url(user) do %>
-    <div>
-      <%= user.name %>
-      <%= user.screen_name %>
-    </div>
+<%= form_for :twitter_user, :url => search_url do |f| %>
+  <%= text_field_tag :q %>
+  <%= submit_tag "BONGO" %>
+<% end %>
+
+<% if @users %>
+  <% @users.each do |user| %>
+    <%= link_to twitter_user_url(user) do %>
+      <div>
+        <%= user.name %>
+        <%= user.screen_name %>
+      </div>
+    <% end %>
   <% end %>
 <% end %>
