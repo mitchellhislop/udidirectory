@@ -2,6 +2,12 @@
 @import "compass/typography/lists"
 @import "compass/css3/border-radius"
 @import "compass/css3/box-shadow"
+@import "compass/layout.scss"
+
++sticky-footer(30px, "#layout", "#layout_footer", "#footer")
+
+#footer
+  text-align: center
 
 $default-border-radius: 2px
 
@@ -30,11 +36,9 @@ body
 #doc
   +border-radius
   +single-box-shadow(#aaa, 1px, 1px, 6px, 1px)
-  margin: 2em auto
   text-align: left
   width: 500px
   border: 1px solid $dkblue
-  padding: 1em
   background-color: white
 
 a, a:hover, a:visited
@@ -43,6 +47,8 @@ a, a:hover, a:visited
 h1, h2, h3
   color: $highlight
   margin-bottom: 1em
+  a
+    text-decoration: none
 
 h1
   font-size: 1.5em
@@ -73,3 +79,8 @@ h3
 
 #new-udid
   font-size: 20px
+  
+#login
+
+#seach
+ 
