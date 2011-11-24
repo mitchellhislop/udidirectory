@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111124022021) do
+ActiveRecord::Schema.define(:version => 20111124022939) do
 
   create_table "twitter_users", :force => true do |t|
     t.integer  "twitter_id"
@@ -21,6 +21,11 @@ ActiveRecord::Schema.define(:version => 20111124022021) do
     t.datetime "updated_at"
   end
 
+  add_index "twitter_users", ["description"], :name => "index_twitter_users_on_description"
+  add_index "twitter_users", ["name"], :name => "index_twitter_users_on_name"
+  add_index "twitter_users", ["screen_name"], :name => "index_twitter_users_on_screen_name"
+  add_index "twitter_users", ["twitter_id"], :name => "index_twitter_users_on_twitter_id"
+
   create_table "udids", :force => true do |t|
     t.integer  "twitter_user_id"
     t.string   "name"
@@ -28,5 +33,7 @@ ActiveRecord::Schema.define(:version => 20111124022021) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "udids", ["twitter_user_id"], :name => "index_udids_on_twitter_user_id"
 
 end
