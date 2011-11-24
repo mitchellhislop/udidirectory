@@ -1,12 +1,20 @@
-<ol id="step-list">
-<% if current_user %>
-  <li>Hello <%= current_user.name %> </li>
-<% else %>
-  <li><%= form_tag "/auth/twitter", :method => 'get' do %>
-  	<%= submit_tag "Sign in with Twitter", :name => "commit", :value => "Sign in" %>
-<% end %>
-</li>
-<% end %>
-  <li>Share your UDID</li>
-  <li>Get Betas! or share them </li>
-</ol>
+<p>UDIDirectory is a free, public list of people who are willing to share their device UDIDs.</p>
+
+<h2>For Users</h2>
+<p>Users can sign in with twitter and add the UDIDs of your device(s). This lets developers find them, so they can create builds for you without asking.</p>
+
+<h2>For Developers</h2>
+<p>Developers can search the database for the UDIDs of users they want to send beta builds to.</p>
+
+<div id="login">
+	<%= form_tag "/auth/twitter", :method => 'get' do %>
+  <%= image_submit_tag "signinwithtwitter.png", :name => "commit", :value => "Sign in" %>
+	<% end %>
+</div>
+
+<div id="search">
+	<%= form_tag "/search", :method => 'post' do %>
+	<%= text_field_tag 'username', '', :size => 15 %>
+  <%= submit_tag "Search" %>
+	<% end %>
+</div>
