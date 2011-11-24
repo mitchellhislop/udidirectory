@@ -1,0 +1,8 @@
+<% @users.each do |user| %>
+  <%= link_to twitter_user_url(user) do %>
+    <div>
+      <%= user.name %>
+      <%= user.screen_name %>
+    </div>
+  <% end %>
+<% end %>
