@@ -1,20 +1,25 @@
-<p>UDIDirectory is a free, public list of people who are willing to share their device UDIDs.</p>
+<p>UDIDirectory is a free, public list of people who are willing to share their device <a href="http://developer.apple.com/library/ios/#documentation/General/Conceptual/ApplicationDevelopmentOverview/Glossary/Glossary.html">UDIDs</a>.</p>
 
-<h2>For Users</h2>
-<p>Users can sign in with twitter and add the UDIDs of your device(s). This lets developers find them, so they can create builds for you without asking.</p>
-
-<h2>For Developers</h2>
-<p>Developers can search the database for the UDIDs of users they want to send beta builds to.</p>
-
-<div id="login">
-	<%= form_tag "/auth/twitter", :method => 'get' do %>
-  <%= image_submit_tag "signinwithtwitter.png", :name => "commit", :value => "Sign in" %>
-	<% end %>
+<div id="login" class="choicebox">
+	<h2>For Users</h2>
+	<p>Users can sign in with Twitter and add the UDIDs of your device(s). This lets developers find them, so they can create builds for you without asking.</p>
+	<br>
+	<div class="centered">
+		<%= form_tag "/auth/twitter", :method => 'get' do %>
+	  <%= image_submit_tag "signinwithtwitter.png", :name => "commit", :value => "Sign in" %>
+		<% end %>
+	</div>
 </div>
 
-<div id="search">
-	<%= form_tag "/search", :method => 'post' do %>
-	<%= text_field_tag 'username', '', :size => 15 %>
-  <%= submit_tag "Search" %>
-	<% end %>
+<div id="search" class="choicebox">
+	<h2>For Developers</h2>
+	<p>Developers can search the database for the UDIDs of users they want to send beta builds to.</p>
+	<br><br>
+	<div class="centered">
+		<%= form_tag "/search", :method => 'post' do %>
+		<%= label_tag "username", "Twitter username:" %>
+		<%= text_field_tag 'username', '', :size => 16 %>
+	  <%= submit_tag "Search" %>
+		<% end %>
+	</div>
 </div>
