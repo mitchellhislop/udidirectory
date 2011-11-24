@@ -3,7 +3,7 @@
   <%= submit_tag "BONGO" %>
 <% end %>
 
-<% if @users %>
+<% if @users && !@users.empty? %>
   <% @users.each do |user| %>
     <%= link_to twitter_user_url(user) do %>
       <div>
@@ -12,4 +12,6 @@
       </div>
     <% end %>
   <% end %>
+<% else %>
+  <p>no users found</p>
 <% end %>
