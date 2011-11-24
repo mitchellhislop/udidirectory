@@ -17,7 +17,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'twitter-auth',     :git => 'git://github.com/paulrosania/twitter-auth.git'
+gem 'twitter-auth', :git => 'git://github.com/paulrosania/twitter-auth.git', :lib => 'twitter_auth'
 gem "warden", "1.0.5"
 gem "devise", "1.4.9"
 gem "formtastic", "2.0.2"
