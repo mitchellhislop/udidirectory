@@ -1,5 +1,5 @@
 class Udid < ActiveRecord::Base
-  belongs_to :user
+  belongs_to :twitter_user
 
   before_validation :strip_udid
   validates :user, :presence => true

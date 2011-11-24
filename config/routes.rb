@@ -4,7 +4,7 @@ Udidirectory::Application.routes.draw do
   get '/auth/twitter/callback', :to => 'session#create', :as => 'callback'
   get '/auth/failure', :to => 'session#error', :as => 'failure'
   get '/profile', :to => 'session#show', :as => 'show'
-  delete '/signout', :to => 'session#destroy', :as => 'signout'
+  get '/signout', :to => 'session#destroy', :as => 'signout'
 
   root :to => 'public#index'
 end

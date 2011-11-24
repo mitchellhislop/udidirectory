@@ -40,3 +40,7 @@ gem "jquery-rails"
 group :production do
   gem "pg"
 end
+
+group :development do
+  gem "ruby-debug"
+end
