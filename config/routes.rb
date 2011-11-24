@@ -1,4 +1,5 @@
 Udidirectory::Application.routes.draw do
+  resource :search, :only => [:show, :create]
   resources :udids, :except => [:show]
 
   get '/auth/twitter/callback', :to => 'session#create', :as => 'callback'
