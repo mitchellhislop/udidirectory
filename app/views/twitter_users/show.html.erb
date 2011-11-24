@@ -1,2 +1,8 @@
-<h1>TwitterUsers#show</h1>
-<p>Find me in app/views/twitter_users/show.html.erb</p>
+<%= @user.screen_name %><br>
+<%= @user.name %><br>
+<%= @user.description %><br>
+
+<% @user.udids.each do |udid| %>
+  <%= udid.name %>
+  <%= udid.udid %>
+<% end %>
