@@ -1,5 +1,7 @@
 class PublicController < ApplicationController
   def index
-    redirect_to udids_url if user_signed_in?
+    if session['access_token'] && session['access_secret']
+      @user = client.user
+    end
   end
 end

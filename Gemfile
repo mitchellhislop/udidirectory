@@ -17,9 +17,12 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'twitter-auth', :git => 'git://github.com/paulrosania/twitter-auth.git'
-gem "warden", "1.0.5"
-gem "devise", "1.4.9"
+# For Twitter login
+gem 'haml', '~> 3.2.0.alpha'
+gem 'omniauth-twitter'
+gem 'twitter'
+gem "twitter-text", :git => 'git://github.com/twitter/twitter-text-rb.git'
+
 gem "formtastic", "2.0.2"
 gem "escape_utils"
 gem "sass"

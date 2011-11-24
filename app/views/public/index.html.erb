@@ -1,5 +1,12 @@
 <ol id="step-list">
-  <li><%= link_to "Signup!", signup_url %></li>
+<% if @user %>
+  <li>Hello <%= @user.name %> </li>
+<% else %>
+  <li><%= form_tag "/auth/twitter", :method => 'get' do %>
+  	<%= submit_tag "Sign in with Twitter", :name => "commit", :value => "Sign in" %>
+<% end %>
+</li>
+<% end %>
   <li>Share your UDID</li>
   <li>Get Betas! or share them </li>
 </ol>

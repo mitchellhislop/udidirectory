@@ -1,12 +1,12 @@
 Udidirectory::Application.routes.draw do
+
+
   resources :udids, :except => [:show]
 
-  devise_scope :user do
-    get "signup", :to => "devise/registrations#new"
-    get "signin", :to => "devise/sessions#new"
-    get "signout", :to => "devise/sessions#destroy"
-  end
-  devise_for :users
+  get '/auth/twitter/callback', :to => 'session#create', :as => 'callback'
+  get '/auth/failure', :to => 'session#error', :as => 'failure'
+  get '/profile', :to => 'session#show', :as => 'show'
+  delete '/signout', :to => 'session#destroy', :as => 'signout'
 
   root :to => 'public#index'
 end
