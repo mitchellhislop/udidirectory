@@ -12,7 +12,6 @@ gem 'json'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.1.5.rc.2'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
 end
@@ -23,10 +22,11 @@ gem 'omniauth-twitter'
 gem 'twitter'
 gem "twitter-text", :git => 'git://github.com/twitter/twitter-text-rb.git'
 
+# Twitter Bootstrap
+gem 'less-rails-bootstrap'
+
 gem "formtastic", "2.0.2"
 gem "escape_utils"
-gem "sass"
-gem "compass", "~> 0.12.alpha"
 gem "rspec-rails", ">= 2.7.0", :group => [:test, :cucumber]
 gem "cucumber-rails", ">= 1.2.0", :group => [:test, :cucumber]
 gem "capybara", :group => [:test, :cucumber]

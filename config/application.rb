@@ -51,7 +51,7 @@ module Udidirectory
     end
 
     # Global Sass Option
-    config.generators.stylesheet_engine = :sass
+    #config.generators.stylesheet_engine = :sass
   
 
     # Enable the asset pipeline
