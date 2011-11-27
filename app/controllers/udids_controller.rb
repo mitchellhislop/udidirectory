@@ -2,6 +2,7 @@ class UdidsController < ApplicationController
   before_filter :authenticate_user!
 
   def index
+    @user = current_user
     @udids = current_user.udids.all
   end
 

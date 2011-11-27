@@ -1,10 +1,48 @@
-<%= link_to 'New Udid', new_udid_path, :id => "new-udid" %>
+<h1>Your UUIDs</h2>
+	<p>Welcome, <%= @user.screen_name %>.</p>
 
-<% @udids.each do |udid| %>
-  <div>
-    <%= udid.name %>
-    <%= udid.udid %>
-    <%= link_to 'Edit', edit_udid_path(udid) %>
-    <%= link_to 'Destroy', udid, :confirm => 'Are you sure?', :method => :delete %>
-  </div>
+<% if @udids.count == 0 then %>
+	<p>It looks like you don't have any UDIDs added yet. Add one below.</p>
 <% end %>
+
+<table>
+	<thead>
+		<tr>
+			<th>
+				Name
+			</th>
+			<th>
+				UDID
+			</th>
+			<th>
+				Actions
+			</th>
+		</tr>
+	</thead>
+	<% @udids.each do |udid| %>
+	<tr>
+		<td>
+			<%= udid.name %>
+		</td>
+		<td>
+			<%= udid.udid %>
+		</td>
+		<td>
+			<%= link_to 'Edit', edit_udid_path(udid), :class => "btn info" %>
+			<%= link_to 'Delete', udid, :confirm => 'Are you sure you want to delete this UDID?', :method => :delete, :class => "btn danger" %>
+		</td>
+	</tr>
+	<% end %>
+
+	<tr>
+		<td>
+		</td>
+		<td>
+		</td>
+		<td>
+			<%= link_to 'Add New UDID...', new_udid_path, :class => "btn primary" %>
+		</td>
+	</tr>
+
+</table>
+

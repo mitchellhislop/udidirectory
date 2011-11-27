@@ -1,6 +1,8 @@
+<h1>New UDID</h1>
+
 <%= semantic_form_for @udid do |f| %>
   <%= render :partial => "form", :locals => {:f => f} %>
   <%= f.buttons do %>
-    <%= f.submit "Create" %>
+    <%= f.submit "Create", :class => "btn primary large" %>
   <% end %>
 <% end %>
