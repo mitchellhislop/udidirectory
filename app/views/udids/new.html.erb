@@ -1,8 +1,36 @@
-<h1>New UDID</h1>
-
-<%= semantic_form_for @udid do |f| %>
-  <%= render :partial => "form", :locals => {:f => f} %>
-  <%= f.buttons do %>
-    <%= f.submit "Create", :class => "btn primary large" %>
-  <% end %>
+<%= form_for @udid do |f| %>
+		<h2>New UDID</h2>
+		
+		<fieldset>
+			
+			<div class="clearfix">
+				<%= f.label :name %>
+				<div class="input">
+			 		<%= f.text_field :name, :class => "span8" %>
+				</div>
+			</div>
+			
+			<% if @udid.errors.any? %>
+			<div class="clearfix error">
+			<% else %>
+			<div class="clearfix">
+			<% end %>
+				<%= f.label :udid %>
+				<div class="input">
+				<%= f.text_field :udid, :class => "span8" %>
+				<span class="help-inline">
+					<% if @udid.errors.any? %>
+					    <% @udid.errors.full_messages.each do |msg| %>
+					        <%= msg %><br>
+					    <% end %>
+					<% end %>				
+				</span>
+				</div
+			</div>
+		</fieldset>
+		
+		<div class="actions">
+	 	<%= f.submit "Create", :class => "btn primary" %>
+		<%= link_to "Cancel", {:controller => "udids", :action => "index"}, :class => "btn" %>
+		</div>
 <% end %>

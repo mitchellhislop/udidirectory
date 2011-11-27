@@ -25,7 +25,6 @@ gem "twitter-text", :git => 'git://github.com/twitter/twitter-text-rb.git'
 # Twitter Bootstrap
 gem 'less-rails-bootstrap'
 
-gem "formtastic", "2.0.2"
 gem "escape_utils"
 gem "rspec-rails", ">= 2.7.0", :group => [:test, :cucumber]
 gem "cucumber-rails", ">= 1.2.0", :group => [:test, :cucumber]

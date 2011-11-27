@@ -20,6 +20,11 @@
       }
     </style>
 
+		<%= javascript_include_tag :application %>
+		<script type="text/javascript">
+		  <%= yield :javascripts %>
+		</script>
+
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -38,11 +43,6 @@
 	    </footer>
 
     </div> <!-- /container -->
-
-		<%= javascript_include_tag :application %>
-		<script type="text/javascript">
-		  <%= yield :javascripts %>
-		</script>
 
   </body>
 </html>
