@@ -7,7 +7,6 @@ class SearchController < ApplicationController
       if (!@users || @users.empty?) then
         redirect_to :controller => "public", :action => "not_found"
       else
-        puts "HERE!!!!!!!"
         redirect_to :controller => "twitter_users", :action => "show", :id => @users[0].screen_name
       end
       
