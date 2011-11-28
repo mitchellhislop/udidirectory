@@ -1,8 +1,24 @@
-<%= @user.screen_name %><br>
-<%= @user.name %><br>
-<%= @user.description %><br>
+<%= raw header_for_page(@user.screen_name) %>
 
-<% @user.udids.each do |udid| %>
-  <%= udid.name %>
-  <%= udid.udid %>
-<% end %>
+<table>
+	<thead>
+		<tr>
+			<th>
+				Name
+			</th>
+			<th>
+				UDID
+			</th>
+		</tr>
+	</thead>
+	<% @user.udids.each do |udid| %>
+	<tr>
+		<td>
+			<%= udid.name %>
+		</td>
+		<td>
+			<%= udid.udid %>
+		</td>
+	</tr>
+	<% end %>
+</table>

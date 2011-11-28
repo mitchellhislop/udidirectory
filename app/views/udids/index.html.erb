@@ -1,5 +1,6 @@
-<h1>Your UUIDs</h2>
-	<p>Welcome, <%= @user.screen_name %>.</p>
+<%= raw header_for_page("Your UUIDs") %>
+
+<p>Welcome, <%= @user.screen_name %>.</p>
 
 <% if @udids.count == 0 then %>
 	<p>It looks like you don't have any UDIDs added yet. Add one below.</p>

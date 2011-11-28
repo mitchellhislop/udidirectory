@@ -1,3 +1,6 @@
+<%= raw header_for_page("Search") %>
+
+
 <% if @users && !@users.empty? %>
   <% @users.each do |user| %>
     <%= link_to twitter_user_url(user) do %>
