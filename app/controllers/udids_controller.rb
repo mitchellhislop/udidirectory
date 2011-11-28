@@ -10,10 +10,6 @@ class UdidsController < ApplicationController
     @udid = current_user.udids.new
   end
 
-  def edit
-    @udid = current_user.udids.find(params[:id])
-  end
-
   def create
     @udid = current_user.udids.new(params[:udid])
     @udid.twitter_user = current_user

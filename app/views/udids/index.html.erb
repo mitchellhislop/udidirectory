@@ -10,7 +10,7 @@
 	<thead>
 		<tr>
 			<th>
-				Name
+				Device Name
 			</th>
 			<th>
 				UDID
@@ -29,7 +29,6 @@
 			<%= udid.udid %>
 		</td>
 		<td>
-			<%= link_to 'Edit', edit_udid_path(udid), :class => "btn info" %>
 			<%= link_to 'Delete', udid, :confirm => 'Are you sure you want to delete this UDID?', :method => :delete, :class => "btn danger" %>
 		</td>
 	</tr>
