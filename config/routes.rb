@@ -9,6 +9,7 @@ Udidirectory::Application.routes.draw do
   get '/signout', :to => 'session#destroy', :as => 'signout'
 
   get '/privacyandsafety', :to => 'public#privacy_and_safety'
+  get '/usernotfound', :to => 'public#not_found'
 
   root :to => 'public#index'
 end

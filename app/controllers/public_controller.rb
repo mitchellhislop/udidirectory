@@ -5,4 +5,8 @@ class PublicController < ApplicationController
   
   def privacy_and_safety
   end
+  
+  def not_found
+  end
+  
 end
