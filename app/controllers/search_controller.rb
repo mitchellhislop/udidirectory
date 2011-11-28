@@ -2,7 +2,7 @@ class SearchController < ApplicationController
   def show
     if params["q"]
       q = params["q"].gsub(/[@]+/,'')
-      @users = TwitterUser.find_all_by_screen_name(q)
+      @users = TwitterUser.where(['screen_name LIKE ?', q])
       
       if (!@users || @users.empty?) then
         redirect_to :controller => "public", :action => "not_found"
