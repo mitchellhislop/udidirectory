@@ -42,6 +42,7 @@
 		</td>
 		<td>
 			<%= link_to 'Add New UDID...', new_udid_path, :class => "btn primary" %>
+			<%= link_to 'Sign Out', {:action => :destroy, :controller => :session}, :class => "btn" %>
 		</td>
 	</tr>
 
