@@ -30,6 +30,7 @@ protected
     end
   end
   
+  helper_attr :client
   def client
     Twitter.configure do |config|
       config.consumer_key = ENV['CONSUMER_KEY']
