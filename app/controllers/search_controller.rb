@@ -9,8 +9,6 @@ class SearchController < ApplicationController
       else
         redirect_to :controller => "twitter_users", :action => "show", :id => @users[0].screen_name
       end
-      
-      # render :json => @users
     end
   end
 end
