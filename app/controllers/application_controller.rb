@@ -15,11 +15,10 @@ protected
   def current_user
     return @tu if defined?(@tu)
     return unless session['access_token'] && session['access_secret']
-    client_user = client.user
-    @tu = TwitterUser.find_or_initialize_by_twitter_id(client_user.id)
-    @tu.name = client_user.name
-    @tu.screen_name = client_user.screen_name
-    @tu.description = client_user.description
+    @tu = TwitterUser.find_or_initialize_by_twitter_id(client.user.id)
+    @tu.name = client.user.name
+    @tu.screen_name = client.user.screen_name
+    @tu.description = client.user.description
     @tu.save
     @tu
   end
