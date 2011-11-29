@@ -35,6 +35,8 @@
   <body>
 
     <div class="container">
+
+      <%= link_to 'Sign Out', {:action => :destroy, :controller => :session}, :class => "signout" %>
 	
 		 	<%= yield %>
 
