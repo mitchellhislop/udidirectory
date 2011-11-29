@@ -4,6 +4,7 @@ class UdidsController < ApplicationController
   def index
     @user = current_user
     @udids = current_user.udids.all
+    @friends = TwitterUser.find_all_by_twitter_id(client.friend_ids.collection, :include => [:udids])
   end
 
   def new
