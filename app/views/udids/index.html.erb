@@ -1,4 +1,4 @@
-<%= raw header_for_page("Your UDIDs") %>
+<%= raw header_for_page("UDIDs") %>
 
 <p>Welcome, <%= @user.screen_name %>.</p>
 
@@ -6,6 +6,7 @@
 	<p>It looks like you don't have any UDIDs added yet. Add one below.</p>
 <% end %>
 
+<h2>Your UDIDs</h2>
 <table>
 	<thead>
 		<tr>
@@ -45,7 +46,10 @@
 
 </table>
 
-<h2>Friends</h2>
+<h2>Friends UDIDs</h2>
+
+<% @friends.each do |friend| %>
+<h3><%= friend.name %> <small><%= friend.screen_name %></small></h3>
 <table>
 	<thead>
 		<tr>
@@ -59,21 +63,15 @@
 			</th>
 		</tr>
 	</thead>
-	<% @friends.each do |friend| %>
+	<% friend.udids.each do |udid| %>
 	<tr>
-		<td><%= friend.name %> (<%= friend.screen_name%>)</td>
-		<% friend.udids.each do |udid| %>
-		<tr>
-			<td>
-				<%= udid.name %>
-			</td>
-			<td>
-				<%= udid.udid %>
-			</td>
-		</tr>
-		<% end %>
+		<td>
+			<%= udid.name %>
+		</td>
+		<td>
+			<%= udid.udid %>
+		</td>
+	</tr>
 	<% end %>
 </table>
-
-<%= debug @friends %>
 
