@@ -45,5 +45,35 @@
 
 </table>
 
+<h2>Friends</h2>
+<table>
+	<thead>
+		<tr>
+			<th>
+				Device Name
+			</th>
+			<th>
+				UDID
+			</th>
+			<th>
+			</th>
+		</tr>
+	</thead>
+	<% @friends.each do |friend| %>
+	<tr>
+		<td><%= friend.name %> (<%= friend.screen_name%>)</td>
+		<% friend.udids.each do |udid| %>
+		<tr>
+			<td>
+				<%= udid.name %>
+			</td>
+			<td>
+				<%= udid.udid %>
+			</td>
+		</tr>
+		<% end %>
+	<% end %>
+</table>
+
 <%= debug @friends %>
 
