@@ -35,9 +35,9 @@
   <body>
 
     <div class="container">
-
-      <%= link_to 'Sign Out', {:action => :destroy, :controller => :session}, :class => "signout" %>
-	
+      <% if current_user %>
+        <%= link_to 'Sign Out', {:action => :destroy, :controller => :session}, :class => "signout" %>
+      <% end %>
 		 	<%= yield %>
 
 	    <footer>
