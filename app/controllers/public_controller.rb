@@ -3,7 +3,7 @@ class PublicController < ApplicationController
     redirect_to udids_url if current_user
   end
 
-  def privacy_and_safety
+  def start
   end
 
   def not_found

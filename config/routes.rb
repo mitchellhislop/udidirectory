@@ -8,7 +8,7 @@ Udidirectory::Application.routes.draw do
   get '/profile', :to => 'session#show', :as => 'show'
   get '/signout', :to => 'session#destroy', :as => 'signout'
 
-  get '/privacyandsafety', :to => 'public#privacy_and_safety'
+  get '/start', :to => 'public#start'
   get '/usernotfound', :to => 'public#not_found'
   get '/faq', :to => "public#faq"
 
