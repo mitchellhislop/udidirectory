@@ -1,4 +1,10 @@
-<%= raw header_for_page(@user.screen_name) %>
+<%= raw header_for_page() %>
+
+<h2><%= @user.screen_name %></h2>
+
+<p>
+  <%= link_to h("#{@user.screen_name} on twitter"), "http://twitter.com/#{h(@user.screen_name)}" %>
+</p>
 
 <table>
 	<thead>
