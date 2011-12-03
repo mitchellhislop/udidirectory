@@ -5,7 +5,7 @@ module ApplicationHelper
     <div class="row">
       <div class="span-two-thirds">
         <div class="page-header">
-      	  <h1>UDIDirectory <small>#{title}</small></h1>
+      	  <h1><a style="text-decoration:none;color:#404040;" href="/">UDIDirectory</a> <small>#{title}</small></h1>
       	</div>
       </div>
       <div class="span-one-third">
