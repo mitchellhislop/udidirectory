@@ -50,28 +50,32 @@
 
 <h2>Friends UDIDs</h2>
 
+<div class="row">
+	<div class="span4">
+	</div>
+	<div class="span6">
+		<strong>Device Name</strong>
+	</div>
+	<div class="span8">
+		<strong>UUID</strong>
+	</div>
+</div>
+
 <% @friends.each do |friend| %>
-<div id="row">
-	<div id="span16">
+<div class="row">
+	<div class="span16">
 			<h3><%= friend.name %> <small><%= friend.screen_name %></small></h3>
 	</div>
 </div>
 
-<div id="row">
-	<div id="span8">
-		<p>Device Name</p>
-	</div>
-	<div id="span8">
-		<p>UUID</p>
-	</div>
-</div>
-
 <% friend.udids.each do |udid| %>
-<div id="row">
-	<div id="span8">
+<div class="row">
+	<div class="span4">
+	</div>
+	<div class="span6">
 		<p><%= udid.name %></p>
 	</div>
-	<div id="span8">
+	<div class="span8">
 		<p><%= udid.udid %></p>
 	</div>
 </div>
