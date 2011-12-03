@@ -1,38 +1,40 @@
 <%= raw header_for_page("Start", false) %>
 
-<p>There are <strong>two important things</strong> you should know before listing your UDID(s) here.</p>
+<h2>Sweet!</h2>
 
 <div class="row">
-  <div class="span16">
-  <h3>1. Privacy.</h3>
-  <p>
-    1. You are making your UDID public. <%= TwitterUser.count %> people have already done 
-    so include all of the developers of this site. However, if you are 
-    curious what privacy implications there are, you can read about them 
-    in our <%= link_to "faq", faq_url(:anchor => "private") %>.
-  </p>
+  <div class="span8">
+    <h3>Welcome to UDIDirectory</h3>
 
-  <h3>2. Trust.</h3>
-  <p>
-    Only install apps from someone you trust. Seriously. Mean people can 
-    code too and they have heard about Twitter. Learn more about in on our 
-    <%= link_to "faq", faq_url(:anchor => "private") %>.
-  </p>
-  </div>
-</div>
+    <p>
+      We wanted to make this really simple, so there are only two steps.
+      Sign in and paste your UDID. After that, you can look for friends 
+      who have public UDIDs and send them builds.
+    </p>
 
-<br><br>
+    <p>
+      To continue, click the button below.
+    </p>
 
-<div class="row">
-  <div class="span5">
-  <p>If you'd like to continue...</p>
-  <%= form_tag "/auth/twitter", :method => 'get' do %>
-    <%= submit_tag "Sign in with Twitter",  :class => "btn primary large" %>
-  <% end %>
+    <%= form_tag "/auth/twitter", :method => 'get' do %>
+      <%= submit_tag "Sign in with Twitter",  :class => "btn primary large" %>
+    <% end %>
   </div>
 
-  <div class="span11">
-  <p>Otherwise...</p>
-  <%= link_to "« Back", { :action => :index }, :class => "btn large" %>
+  <div class="span6">
+    <h5>1. Privacy.</h5>
+    <p>
+      You are making your UDID public. <%= TwitterUser.count %> people have already done 
+      so include all of the developers of this site. However, if you are 
+      curious what privacy implications there are, you can read about them 
+      in our <%= link_to "faq", faq_url(:anchor => "private") %>.
+    </p>
+
+    <h5>2. Trust.</h5>
+    <p>
+      Only install apps from someone you trust. Seriously. Mean people can 
+      code too and they have heard about Twitter. Learn more about in on our 
+      <%= link_to "faq", faq_url(:anchor => "private") %>.
+    </p>
   </div>
 </div>

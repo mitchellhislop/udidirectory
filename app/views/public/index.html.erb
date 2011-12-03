@@ -1,22 +1,28 @@
-<!-- Main hero unit for a primary marketing message or call to action -->
 <div class="hero-unit">
   <h1>UDIDirectory</h1>
-  <p>UDIDirectory is a free, public list of people who are willing to share their device <a href="http://developer.apple.com/library/ios/#documentation/General/Conceptual/ApplicationDevelopmentOverview/Glossary/Glossary.html">UDIDs</a>.</p>
+  <p>
+    UDIDirectory is a free, public list of people who are willing to share their device <a href="http://developer.apple.com/library/ios/#documentation/General/Conceptual/ApplicationDevelopmentOverview/Glossary/Glossary.html">UDIDs</a>.
+  </p>
 </div>
 
-<!-- Example row of columns -->
 <div class="row">
   <div class="span8">
     <h2>For Users</h2>
-    <p>As a user, you can sign in with Twitter and add the UDIDs of your device(s). This lets developers find them, so they can create builds for you without having to ask first.</p>
+    <p>
+      Make your UDID public and people can send you Beta iPhone apps 
+      quicker and easier.
+    </p>
     <p><%= link_to "Start »", start_url, :class => "btn" %></p>
   </div>
   <div class="span8">
     <h2>For Developers</h2>
-     <p>Developers can search the database (by twitter name) for the UDIDs of users they want to send beta builds to.</p>
+    <p>
+      Want to send an iOS app to friends but don't have their UDID.
+      Search for their name and see if it is available.
+    </p>
     <%= form_for :twitter_user, :url => search_url do |f| %>
       <%= text_field_tag :q %>
       <%= submit_tag "Search", :class => "btn" %>
     <% end %>
- </div>
+  </div>
 </div>
