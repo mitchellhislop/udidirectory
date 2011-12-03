@@ -3,27 +3,36 @@
 <p>There are <strong>two important things</strong> you should know before listing your UDID(s) here.</p>
 
 <div class="row">
-	<div class="span16">
-	<h3>1. Your privacy will be impacted.</h3>
-	<p>Be aware that you are exposing something that has generally considered to be private. Some companies, especially advertising platforms, use UDIDs to "anonymously" track users. By making your UDID public, it's possible for them (or anyone else with your UDID, such as other beta testers) to track it back to you. It's perfectly reasonable that you may not care about these things. We don't, hence this web site.</p>
+  <div class="span16">
+  <h3>1. Privacy.</h3>
+  <p>
+    1. You are making your UDID public. <%= TwitterUser.count %> people have already done 
+    so include all of the developers of this site. However, if you are 
+    curious what privacy implications there are, you can read about them 
+    in our <%= link_to "faq", faq_url(:anchor => "private") %>.
+  </p>
 
-	<h3>2. You may receive unsafe applications.</h3>
-	<p>By making your UDID public, anyone can create and send you an app that will run on your iOS device. Since these builds are not screened by Apple or anyone else, it's possible for them to do malicious things like steal all your contacts, exploit a bug to damage your phone, or any number of other nasty things. For this reason, you should <strong>NEVER INSTALL UNSOLICITED BUILDS</strong>. You should always know and trust the creator of an app you plan to install.</p>
-	</div>
+  <h3>2. Trust.</h3>
+  <p>
+    Only install apps from someone you trust. Seriously. Mean people can 
+    code too and they have heard about Twitter. Learn more about in on our 
+    <%= link_to "faq", faq_url(:anchor => "private") %>.
+  </p>
+  </div>
 </div>
 
 <br><br>
 
 <div class="row">
-	<div class="span5">
-	<p>If you'd like to continue...</p>
-	<%= form_tag "/auth/twitter", :method => 'get' do %>
-		<%= submit_tag "Sign in with Twitter",  :class => "btn primary large" %>
-	<% end %>
-	</div>
+  <div class="span5">
+  <p>If you'd like to continue...</p>
+  <%= form_tag "/auth/twitter", :method => 'get' do %>
+    <%= submit_tag "Sign in with Twitter",  :class => "btn primary large" %>
+  <% end %>
+  </div>
 
-	<div class="span11">
-	<p>Otherwise...</p>
-	<%= link_to	"« Back", { :action => :index }, :class => "btn large" %>
-	</div>
+  <div class="span11">
+  <p>Otherwise...</p>
+  <%= link_to "« Back", { :action => :index }, :class => "btn large" %>
+  </div>
 </div>

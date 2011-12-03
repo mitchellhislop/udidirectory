@@ -10,6 +10,7 @@ Udidirectory::Application.routes.draw do
 
   get '/privacyandsafety', :to => 'public#privacy_and_safety'
   get '/usernotfound', :to => 'public#not_found'
+  get '/faq', :to => "public#faq"
 
   root :to => 'public#index'
 end
