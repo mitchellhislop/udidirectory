@@ -29,7 +29,7 @@ protected
       redirect_to "http://#{APP_DOMAIN}", :status => 301
     end
   end
-  
+
   helper_attr :client
   def client
     Twitter.configure do |config|
